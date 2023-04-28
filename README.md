@@ -24,9 +24,6 @@ Multiple ways to run example
 ```bash
 # Install dependecies and build binary
 conan build . --build=missing -of generated
-
-# Run binary
-./bazel-bin/hello
 ```
 
 ### Build manually with bazel
@@ -35,7 +32,17 @@ conan build . --build=missing -of generated
 # Only install and build manually
 conan install . --build=missing -of generated
 bazel build //:hello
+```
 
+### Run application
+
+```bash
 # Run binary
 ./bazel-bin/hello
+```
+
+Output:
+
+```bash
+[2023-04-28 16:07:12.936] [info] Hello World!
 ```
